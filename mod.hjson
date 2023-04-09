@@ -1,14 +1,14 @@
 #the mod name as displayed in-game
-displayName: "Java Mod Template"
+displayName: "Faster Conveyors"
 
 #the internal name of your mod
-name: "example-java-mod"
+name: "faster-conveyors"
 
 #your name
-author: "You"
+author: "[blue]rudydev"
 
 #the fully qualified main class of the mod
-main: "example.ExampleJavaMod"
+main: "com.github.rudynakodach.FasterConveyors"
 
 #the mod description as seen in the mod dialog
 description: "A Mindustry Java mod template."
