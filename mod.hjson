@@ -11,7 +11,7 @@ author: "[blue]rudydev"
 main: "com.github.rudynakodach.FasterConveyors"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
+description: "Faster Conveyors"
 
 #the mod version
 version: 1.0
