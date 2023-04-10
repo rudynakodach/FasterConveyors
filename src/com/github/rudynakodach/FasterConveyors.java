@@ -2,6 +2,7 @@ package com.github.rudynakodach;
 
 import arc.*;
 import arc.util.*;
+import com.github.rudynakodach.content.FCBlocks;
 import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
@@ -17,8 +18,7 @@ public class FasterConveyors extends Mod{
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("frog");
                 dialog.cont.add("behold").row();
-                //mod sprites are prefixed with the mod name (this mod is called 'example-java-mod' in its config)
-                dialog.cont.image(Core.atlas.find("example-java-mod-frog")).pad(20f).row();
+                dialog.cont.image(Core.atlas.find("faster-conveyors-frog")).pad(20f).row();
                 dialog.cont.button("I see", dialog::hide).size(100f, 50f);
                 dialog.show();
             });
@@ -28,6 +28,7 @@ public class FasterConveyors extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading some example content.");
+        new FCBlocks().load();
     }
 
 }
