@@ -1,6 +1,6 @@
 package com.github.rudynakodach.content;
 
-import mindustry.core.ContentLoader;
+import mindustry.content.Items;
 import arc.struct.Seq;
 import mindustry.content.TechTree;
 import mindustry.content.TechTree.TechNode;
@@ -10,13 +10,16 @@ import mindustry.game.Objectives.*;
 
 import static mindustry.content.Blocks.*;
 
-public class FCTechTree extends ContentLoader {
+public class FCTechTree {
     private static TechNode context = null;
 
-    @Override
     public void load() {
         attachNode(titaniumConveyor, () -> {
-            node(FCBlocks.thoriumConveyor);
+            node(FCBlocks.thoriumConveyor, ItemStack.with(Items.thorium, 7500), () -> {});
+        });
+
+        attachNode(pulseConduit, () -> {
+            node(FCBlocks.thoriumConduit, ItemStack.with(Items.thorium, 8000, Items.metaglass, 2500, Items.titanium, 7500, Items.silicon, 2000), () -> {});
         });
     }
 
