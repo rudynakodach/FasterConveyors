@@ -14,7 +14,7 @@ public class FCBlocks {
 
     public void load() {
         thoriumConveyor = new Conveyor("thorium-conveyor"){{
-           requirements(Category.distribution, with(Items.graphite, 2, Items.thorium, 3, Items.copper, 7, Items.lead, 6, Items.titanium, 4));
+           requirements(Category.distribution, with( Items.thorium, 3, Items.copper, 4, Items.lead, 6, Items.titanium, 4));
            speed = .1f;
            displayedSpeed = 14;
            health = 120;
@@ -24,7 +24,7 @@ public class FCBlocks {
         }};
 
         thoriumConduit = new Conduit("thorium-conduit") {{
-            requirements(Category.liquid, with(Items.metaglass, 3, Items.thorium, 8, Items.titanium, 6));
+            requirements(Category.liquid, with(Items.metaglass, 3, Items.thorium, 8, Items.titanium, 6, Items.lead, 6, Items.copper, 4));
 
             canOverdrive = true;
             liquidCapacity = 20;
