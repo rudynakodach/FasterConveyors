@@ -15,7 +15,9 @@ public class FCTechTree {
 
     public void load() {
         attachNode(titaniumConveyor, () -> {
-            node(FCBlocks.thoriumConveyor, ItemStack.with(Items.thorium, 7500), () -> {});
+            node(FCBlocks.thoriumConveyor, ItemStack.with(Items.thorium, 7500), () -> {
+                node(FCBlocks.thoriumBridge, ItemStack.with(Items.thorium, 8000), () -> {});
+            });
         });
 
         attachNode(pulseConduit, () -> {
