@@ -15,7 +15,7 @@ public class FCBlocks {
 
     public void load() {
         thoriumConveyor = new Conveyor("thorium-conveyor"){{
-           requirements(Category.distribution, with( Items.thorium, 3, Items.copper, 4, Items.lead, 6, Items.titanium, 4));
+           requirements(Category.distribution, with( Items.thorium, 2, Items.copper, 1, Items.lead, 1, Items.titanium, 1));
 
            speed = .1f;
            displayedSpeed = 14;
@@ -25,8 +25,17 @@ public class FCBlocks {
            size = 1;
         }};
 
+        thoriumConduit = new Conduit("thorium-conduit") {{
+            requirements(Category.liquid, with(Items.metaglass, 3, Items.thorium, 2, Items.titanium, 1, Items.lead, 1));
+
+            canOverdrive = true;
+            liquidCapacity = 20;
+            health = 250;
+            size = 1;
+        }};
+
         thoriumBridge = new BufferedItemBridge("thorium-bridge") {{
-            requirements(Category.distribution, with(Items.thorium, 6, Items.copper, 4, Items.lead, 9, Items.titanium, 6));
+            requirements(Category.distribution, with(Items.thorium, 4, Items.copper, 2, Items.lead, 3, Items.titanium, 3));
 
             size = 1;
             canOverdrive = true;
@@ -35,15 +44,6 @@ public class FCBlocks {
             speed = .1f;
             acceptsItems = true;
             itemCapacity = 15;
-        }};
-
-        thoriumConduit = new Conduit("thorium-conduit") {{
-            requirements(Category.liquid, with(Items.metaglass, 3, Items.thorium, 8, Items.titanium, 6, Items.lead, 6, Items.copper, 4));
-
-            canOverdrive = true;
-            liquidCapacity = 20;
-            health = 250;
-            size = 1;
         }};
     }
 }
