@@ -2,7 +2,6 @@ package com.github.rudynakodach.content;
 
 import mindustry.content.Items;
 import mindustry.type.Category;
-import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.distribution.BufferedItemBridge;
 import mindustry.world.blocks.distribution.Conveyor;
@@ -14,7 +13,7 @@ public class FCBlocks {
     public static Block thoriumConveyor, thoriumBridge, thoriumConduit;
 
     public void load() {
-        thoriumConveyor = new Conveyor("thorium-conveyor"){{
+        thoriumConveyor = new Conveyor("thorium-conveyor") {{
            requirements(Category.distribution, with( Items.thorium, 2, Items.copper, 1, Items.lead, 1, Items.titanium, 1));
 
            speed = .1f;
